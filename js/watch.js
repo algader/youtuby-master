@@ -1,15 +1,29 @@
+// const { RequestHeaderFieldsTooLarge } = require("http-errors");
+// const { nextTick } = require("process");
+
+// import { text } from "body-parser";
+// import { valueOf } from "detect-node";
+// import { CHECKING_DISABLED } from "dns-packet";
+// import { size } from "lodash";
+// import { setPriority } from "os";
+// import { option } from "yargs";
+
 $(document).ready(function () {
     /*عند الضغط على الزر استدعي الدالة لتعمل وتظهر وتخفي النص*/
     $("#myBtn").on("click", function(){
         read();
     });
     /*إظهار وإخفاء الردود*/
-    $(".reply").click(function() {
+    $(".reply").click(function() {  
         $(this).parents("div.row").next("div.card").toggle();
     });
+ 
 });
+ 
 
-/*الدالة التي نستخدمها لإظهار وإخفاء العناصر*/
+
+
+// الدالة التي نستخدمها لإظهار وإخفاء العناصر*/
 function read() {
     var dots = document.getElementById("dots");/*أحضر النقاط الثلاث*/
     var moreText = document.getElementById("more");/*أحضر النص الذي نريد إظهاره وإخفائه*/
@@ -23,5 +37,6 @@ function read() {
       dots.style.display = "none";/*أخفي النقط */
       btnText.innerHTML = "عرض عناصر أقل";
       moreText.style.display = "inline";/*أظهر النص المخفي */
-    }
+          }
 }
+

@@ -1,5 +1,6 @@
  $(document).ready(function() {
     $(".first-list-element").addClass("active");
+
     //لحذف الصنف النشط، ووضعه عندما يُضغط على أحد أزرار القائمة العلوية
     $(".nav-item").click(function () {
         $(".nav-item").removeClass("active");
@@ -9,7 +10,7 @@
     $("#toggler").click(function(event) {
         $('#wrap').toggleClass('toggled');
 
-        //إضافة طبقة سوداء
+        // إضافة طبقة سوداء
         var right = $('.sidebar').css("right"); //أعطينا هذه الخاصية للقائمة الجانبية لكي تُصبح على اليمين
         if (right == '0px') //القائمة الجانبية بحالة إظهار وبالتالي يجب إغلاقها
         {
@@ -22,7 +23,22 @@
         }
     });
 
-    //إخفاء القائمة الجانبية والطبقة السوداء عند الضغط على الطبقة السوداء
+    // $("#toggler").click(function(event){
+    //  $('#wrap').toggleClass('toggled');
+    // });
+
+    // var right = $('.sidebar').css("right");
+    // if(right == '0px')
+    // {
+    //     $('.sidebar').css({'right': '-17rem'});
+    //     $('.layer').fadeOut();
+    // }
+    // else{
+    //     $('.sidebar').css({'right': '0'});
+    //     $('.layer').fadeIn();
+    // }
+
+    // إخفاء القائمة الجانبية والطبقة السوداء عند الضغط على الطبقة السوداء
     $('.layer').click(function () {
         $('.sidebar').css({ 'right': '-17rem' });
         $('.layer').fadeOut();
@@ -34,3 +50,6 @@
     });
 
 });
+
+
+
